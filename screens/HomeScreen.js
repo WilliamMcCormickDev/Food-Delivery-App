@@ -4,7 +4,6 @@ import { useNavigation } from '@react-navigation/native';
 import { UserIcon, ChevronDownIcon, AdjustmentsVerticalIcon, MagnifyingGlassIcon } from "react-native-heroicons/outline";
 import Categories from '../components/Categories';
 import FeaturedRow from '../components/FeaturedRow';
-//import sanityClient from '../sanity';
 
 const HomeScreen = () => {
     const navigation = useNavigation();
@@ -16,18 +15,6 @@ const HomeScreen = () => {
         });
     }, []);
 
-    // useEffect(() => {
-    //     sanityClient.fetch(`
-    //     *[_type == "featured"] {
-    //         ...,
-    //         restaurants[]->{
-    //             ...,
-    //             dishes[]->
-    //         }
-    //     }`).then(data => {
-    //         setFeaturedCategories(data);
-    //     });
-    // }, []);
     console.log(featuredCategories);
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 50 : 0 }} className="bg-white pt-5">
